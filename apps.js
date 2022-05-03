@@ -2,6 +2,7 @@
 /*
 array for deck of cards 
 
+dialog tag for modals that are similar to alert/prompt    
 
 button mechanics for instructions to appear
     onclick to throw up a prompt/alert with info in it or queryselector with an event listen and innerHTML fill of the words into a div
@@ -11,7 +12,7 @@ button mechanics for win conditions to appear
 
 mechanics for shuffled deck
     math.random function to mix up the cards that are in the array so each game has a fresh randomized deck
-
+ 
 
 must take point totals of cards along with points of face cards and ace special values
     function to convert selected cards to values for scoring
