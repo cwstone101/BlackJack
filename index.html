@@ -10,28 +10,69 @@
 <body>
 
 <!--Heading for Game-->    
+<header>
 <h1>BLACKJACK PERSCHOLAS CASINO</h1>    
+</header>
+
 <!-- Headline for Dealer -->
-<h2>DEALER</h2>
+<div class="dealerTitle"><h2>DEALER</h2></div>
 
 <div class="dealerArea">
-    <div class="cardBack"></div>
-    <div class="dealerCardArea"></div>
-    <div class="dealerHandScore">0</div>
-    <div class="dealerGameScore">0</div>
+ 
+    <div class="dealerCardArea">
+        <div class="cardBack">
+            <img src="https://www.seekpng.com/png/detail/121-1215767_back-of-card-cards-back.png" alt="" class="cardBackImg">
+    
+        </div>
+    </div>
 Dealer
 </div>
-<hr>
-<h2>PLAYER</h2>
+
+<div class="scoreArea">
+    <table id="tableScores">
+        <tr>
+            <th id="playerWinHeader">Player Wins</th>
+            <th id="dealerWinheader">Dealer Wins</th>
+        </tr>
+
+        <tr>
+            <td><span id="playerWins">0</span></td>
+            <td><span id="dealerWins">0</span></td>
+        </tr>
+
+    </table>
+    
+    
+    <!-- <span class="dealerScore">Dealer Hand Score</span>
+    <div class="dealerHandScore">0</div>
+    <span class="dealerGameScore">Dealer Game Score</span>
+    <div class="dealerGameScoreNum">0</div>
+
+
+    <span class="playerScore">Player Hand Score</span>
+    <div class="playerHandScore">0</div>
+    <span class="playerGameScore">Player Game Score</span>
+    <div class="playerGameScoreNum">0</div> -->
+
+
+</div>
+
+
+<div class="playerTitle"><h2>PLAYER</h2></div>
+
 
 <div class="playerArea">
-    <div class="cardBack"></div>
-    <div class="playerCardArea"></div>
-    <div class="playerHandScore">0</div>
-    <div class="playerGameScore">0</div>
+ 
+    <div class="playerCardArea">
+        
+    </div>
+
+    
 Player  
 </div>
     
+<hr>
+
 <footer>
     <button class="hitMe">Hit Me</button>
     <button class="stay">Stay</button>

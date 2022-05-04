@@ -2,4 +2,112 @@
 here is where all of the styling will go   
 */
 
- 
+body {
+    background-color: green;
+    text-align: center;
+
+}
+
+header {
+    text-align: center;
+    color: white;
+}
+
+.dealerTitle {
+    text-align: center;
+    color: white;
+
+}
+
+.dealerArea {
+    border: 5px solid white;
+    height: 30vh;
+}
+
+.dealerCardArea img {
+    height: 225px;
+    width: 225px;
+    margin: 1px;
+
+}
+.cardBackImg {
+    display: flex;
+    height: 225px;
+    width: 225px;
+
+}
+
+.scoreArea {
+    border: 5px solid white;
+    height: 15vh;
+    justify-content: center;
+}
+
+#tableScores {
+    justify-content: center;
+    display: flex;
+    border: 10px white solid;
+    margin-top: 30px;
+    
+}
+
+.playerWinHeader {
+    border: 5px solid white;
+}
+
+
+.dealerScore{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    margin-left: 10vw;
+
+}
+.dealerHandScore {
+    justify-content: center;
+    display: flex;
+    border: solid 10px black;
+    width: 50px;
+    margin-left:50vw
+
+}
+
+.dealerGameScore {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    margin-left:50vw
+
+}
+
+.dealerGameScoreNum {
+    justify-content: center;
+    display: flex;
+    border: solid 10px black;
+    width: 50px;
+    margin-left:50vw
+}
+
+.playerArea {
+    border: 5px solid white;
+    height: 30vh;
+}
+
+.playerTitle{
+    text-align: center;
+    color: white;
+
+}
+.playerCardArea img {
+    height: 225px;
+    width: 225px;
+    margin: 1px;
+
+}
+
+
+footer {
+    justify-content: center;
+    margin: auto;
+    display: flex;
+}
