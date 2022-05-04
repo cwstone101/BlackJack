@@ -25,6 +25,8 @@ header {
 }
 
 .dealerCardArea img {
+    display: flex;
+    float: left;
     height: 225px;
     width: 225px;
     margin: 1px;
