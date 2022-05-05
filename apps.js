@@ -23,7 +23,8 @@ window.onload = function(){
 }
 
 document.getElementById("startGameID").addEventListener("click", startGame);
-document.getElementById("newGameID").addEventListener("click", newGame );
+// document.getElementById("newGameID").addEventListener("click", newGame );
+document.getElementById("newGameID").addEventListener("click", reset );
 
 
 function newGame(){
@@ -97,6 +98,7 @@ function startGame(){
        let cardImg = document.createElement("img");
        let card = deck.pop();
        cardImg.src = "./cards/" + card + ".png";
+       cardImg.setAttribute("class", "cardImages");
          console.log(card);
        dealerSum += getValue(card);
        dealerAceCount += checkAce(card);
@@ -109,17 +111,18 @@ function startGame(){
         let cardImg = document.createElement("img");
        let card = deck.pop();
        cardImg.src = "./cards/" + card + ".png";
+       cardImg.setAttribute("class", "cardImages");
          console.log(card);
        yourSum += getValue(card);
        yourAceCount += checkAce(card);
        document.getElementById("playerCardAreaID").append(cardImg);
     }
     console.log(yourSum);
-    document.getElementById("hitMeID").addEventListener("click", hit);
-    document.getElementById("stayID").addEventListener("click", stay);
+    
 
 }
-
+document.getElementById("hitMeID").addEventListener("click", hit);
+document.getElementById("stayID").addEventListener("click", stay);
 
 
 function hit(){
@@ -182,7 +185,11 @@ function stay(){
     alert("Game Over");
 }
 
+function reset() {
+    document.querySelectorAll('.cardImages').forEach(el=>el.remove());
+    document.querySelectorAll('.cardImages').forEach(el=>el.remove());
 
+}
 
 
 function getValue(card) {
