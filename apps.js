@@ -86,7 +86,18 @@ function shuffleDeck() {
 }
 
 function startGame(){
-    
+    if (dealerSum != 0){
+        newGame();
+    }
+    canHit = true;
+    // let picCheck = document.getElementById(playerCardAreaID).childNodes;
+    //     for (let i =0; i < picCheck.length; i++){
+    //         if (picCheck[i].getAttribute('src') != null){
+    //             return true;
+    //         }
+    //         return false;
+    //     }   
+    document.getElementById("results").innerText =" ";
     hidden = deck.pop();
     dealerSum += getValue(hidden);
     dealerAceCount += checkAce(hidden)
@@ -111,6 +122,7 @@ function startGame(){
         let cardImg = document.createElement("img");
        let card = deck.pop();
        cardImg.src = "./cards/" + card + ".png";
+            console.log(cardImg);
        cardImg.setAttribute("class", "cardImages");
          console.log(card);
        yourSum += getValue(card);
@@ -123,7 +135,13 @@ function startGame(){
 }
 document.getElementById("hitMeID").addEventListener("click", hit);
 document.getElementById("stayID").addEventListener("click", stay);
+document.getElementById("instructionsID").addEventListener("click", instructions );
 
+
+function instructions(){
+    alert("The classic game of blackjack--review the game at https://en.wikipedia.org/wiki/Blackjack");
+
+}
 
 function hit(){
     if (!canHit){
@@ -133,6 +151,7 @@ function hit(){
        let card = deck.pop();
        cardImg.src = "./cards/" + card + ".png";
          console.log(card);
+         cardImg.setAttribute("class", "cardImages"); 
        yourSum += getValue(card);
        yourAceCount += checkAce(card);
        document.getElementById("playerCardAreaID").append(cardImg);
@@ -183,12 +202,36 @@ function stay(){
 
     document.getElementById("results").innerText = message;
     alert("Game Over");
+    yourSum = 0;
+    dealerSum = 0;
+    console.log(dealerScore);
+    console.log(playerScore);
+    doneYet();
+    // document.getElementById("results").innerText =" ";
 }
 
 function reset() {
     document.querySelectorAll('.cardImages').forEach(el=>el.remove());
-    document.querySelectorAll('.cardImages').forEach(el=>el.remove());
+    //document.querySelectorAll('.cardImages').forEach(el=>el.setAttribute("src", "cardImg"));
+    //document.getElementById("hidden").append("src", "./cards/BACK.png");
+    let b = document.querySelector("#hidden");
+    console.log(b);
 
+    b.setAttribute("src", "./cards/BACK.png");
+    console.log(b);    
+    // document.querySelector('hidden').attributes('src', "./cards/BACK.png");
+
+}
+
+function doneYet(){
+    if (dealerScore === 5){
+        alert("You have lost the Match the Dealer has won 5 games");
+        newGame();
+    }
+    else if (playerScore === 5){
+        alert("You have won the Match you have won 5 games");
+        newGame();
+    }
 }
 
 
