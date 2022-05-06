@@ -13,9 +13,40 @@ header {
     color: white;
 }
 
+button {
+  width: 100px;
+  height: 40px;
+  border-width: 4px;
+  border-radius: 35px;
+  font-size: 13px;
+
+}
+
+button:active{
+    font-size: 15px;
+}
+
+button:hover{
+    background-color: aqua;
+}
+
+.mainTitle {
+    border: 1px solid white;
+    flex: auto;
+    border-radius: 35px;
+    background-color: black;
+}
+
 .dealerTitle {
     text-align: center;
     color: white;
+    border: 1px solid white;
+    flex: auto;
+    border-radius: 35px;
+    background-color: black;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 5px;
 
 }
 
@@ -40,7 +71,7 @@ header {
 }
 
 .scoreArea {
-    border: 5px solid white;
+    /* border: 5px solid white; */
     height: 15vh;
     justify-content: center;
 }
@@ -48,9 +79,21 @@ header {
 #tableScores {
     justify-content: center;
     display: flex;
-    border: 10px white solid;
+    border: 5px white solid;
     margin-top: 30px;
+    border-radius: 35px;
+    background-color: black;
+    color: white;
     
+    
+}
+
+.buttonsSection {
+    border: solid 1px white;
+    margin-top: 20px;
+    border-radius: 35px;
+    background-color: black;
+
 }
 
 .playerWinHeader {
@@ -98,6 +141,13 @@ header {
 .playerTitle{
     text-align: center;
     color: white;
+    border: 1px solid white;
+    flex: auto;
+    border-radius: 35px;
+    background-color: black;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 5px;
 
 }
 .playerCardArea img {
@@ -106,6 +156,7 @@ header {
     margin: 1px;
 
 }
+
 
 
 footer {

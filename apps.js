@@ -2,6 +2,9 @@
 
 
 
+const audio = new Audio();
+audio.src = "shuffle-cards-2.wav";
+
 let dealerSum = 0;
 let yourSum = 0;
 
@@ -201,6 +204,7 @@ function stay(){
     }
 
     document.getElementById("results").innerText = message;
+    document.getElementsByClassName("dealerArea").innerText = message;
     alert("Game Over");
     yourSum = 0;
     dealerSum = 0;
@@ -263,6 +267,8 @@ function reduceAce(playerSum, playerAceCount){
     }
     return playerSum;
 }
+
+
 
 
 /*

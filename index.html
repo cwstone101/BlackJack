@@ -11,7 +11,7 @@
 
 <!--Heading for Game-->    
 <header>
-<h1>BLACKJACK PERSCHOLAS CASINO</h1>    
+<h1 class="mainTitle">BLACKJACK PERSCHOLAS CASINO</h1>    
 </header>
 
 <!-- Headline for Dealer -->
@@ -43,11 +43,16 @@ Dealer
         </tr>
 
     </table>
-    <button id="startGameID">Start Game</button>
+    <section class="buttonsSection">
+    
+    <button id="startGameID" onclick="audio.play();">Start Game</button>
     <button class="hitMe" id="hitMeID">Hit Me</button>
     <button class="stay" id="stayID">Stay</button>
     <button class="instructions" id="instructionsID">Instructions</button>
-    <button class="newGame" id="newGameID">New Game</button>
+    <button class="newGame" id="newGameID" onclick="audio.play();">New Game</button>
+
+    </section>
+    
     <p id="results"> </p>
     
     <!-- <span class="dealerScore">Dealer Hand Score</span>
