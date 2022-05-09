@@ -18,6 +18,7 @@ let dealerScore = 0;
 let playerScore = 0;
 
 let playerWin = 0;
+let dealerWin = 0;
 
 
 
@@ -32,9 +33,14 @@ document.getElementById("startGameID").addEventListener("click", startGame);
 document.getElementById("newGameID").addEventListener("click", reset );
 
 
-function newGame(){
+function newGame() {
     window.location.reload();
-    document.getElementById("playerWinPic").innerHTML = "";
+    playerWin = 0;
+    dealerWin = 0;
+    document.getElementById("playerWinPic").innerHTML = " ";
+    document.getElementById("results").innerText =" ";
+    
+    
 }
 
 
@@ -67,6 +73,7 @@ function startGame(){
     }
     canHit = true;
     playerWin = 0;
+    dealerWin = 0;
     document.getElementById("playerWinPic").innerHTML = "";
    
     document.getElementById("results").innerText =" ";
@@ -159,6 +166,7 @@ function stay(){
     if (yourSum > 21){
         message = "You Lose!";
         dealerScore++;
+        dealerWin++;
         document.getElementById("dealerWins").innerHTML = dealerScore;
     }
     else if (dealerSum > 21){
@@ -182,6 +190,7 @@ function stay(){
     else if (yourSum < dealerSum){
         message = "You Lose!";
         dealerScore++;
+        dealerWin++;
         document.getElementById("dealerWins").innerHTML = dealerScore;
 
     }
@@ -190,6 +199,11 @@ function stay(){
         playerWinAudio();
         document.getElementById("playerWinPic").innerHTML = '<img src="thumbsUp.jpg"></img>';
 
+    }
+
+    if (dealerWin > 0){
+        document.getElementById("playerWinPic").innerHTML = '<img src="SadFace.jpg"></img>';
+    
     }
 
     document.getElementById("results").innerText = message;
