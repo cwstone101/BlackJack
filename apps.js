@@ -35,36 +35,6 @@ function newGame(){
 }
 
 
-// function reset(){
-    // dealerSum = 0;
-    // yourSum = 0;
-    // dealerAceCount = 0;
-    // yourAceCount = 0;
-    // document.getElementById(game).innerHTML = "";
-    // document.getElementsByName().innerHTML = "";
-//}
-
-    
-//     rounds = 0;
-//     userScore = 0;
-//     computerScore = 0;
-//     ties = 0;
-//     round_number.innerHTML = 'Round: '
-//     ties_number.innerHTML = '0'
-//     computerScore_span.innerHTML = '0'
-//     userScore_span.innerHTML = '0'
-//   }
-// function clearBoard(game)
-//     {
-//         //Remove all remaining cards from here (Clean up the DIV's if need be)
-//         document.getElementById(game).innerHTML = "";
-//         //document.getElementById(cards).innerHTML = "";
-//         //document.getElementById(card).innerHTML = "";
-//     }
-
-
-
-
 function buildDeck() {
     let values = ["A", "2", "3", "4", "5","6","7","8","9","10","J","Q", "K" ];
     let types = ["C", "D","H","S"];
@@ -93,13 +63,7 @@ function startGame(){
         newGame();
     }
     canHit = true;
-    // let picCheck = document.getElementById(playerCardAreaID).childNodes;
-    //     for (let i =0; i < picCheck.length; i++){
-    //         if (picCheck[i].getAttribute('src') != null){
-    //             return true;
-    //         }
-    //         return false;
-    //     }   
+   
     document.getElementById("results").innerText =" ";
     hidden = deck.pop();
     dealerSum += getValue(hidden);
@@ -336,8 +300,41 @@ let testDeck = createDeck();
 
 shuffleDeck(testDeck);
 console.log(testDeck);
-
-
-
     */
+
+// function reset(){
+    // dealerSum = 0;
+    // yourSum = 0;
+    // dealerAceCount = 0;
+    // yourAceCount = 0;
+    // document.getElementById(game).innerHTML = "";
+    // document.getElementsByName().innerHTML = "";
+//}
+
+    
+//     rounds = 0;
+//     userScore = 0;
+//     computerScore = 0;
+//     ties = 0;
+//     round_number.innerHTML = 'Round: '
+//     ties_number.innerHTML = '0'
+//     computerScore_span.innerHTML = '0'
+//     userScore_span.innerHTML = '0'
+//   }
+// function clearBoard(game)
+//     {
+//         //Remove all remaining cards from here (Clean up the DIV's if need be)
+//         document.getElementById(game).innerHTML = "";
+//         //document.getElementById(cards).innerHTML = "";
+//         //document.getElementById(card).innerHTML = "";
+//     }
+ // let picCheck = document.getElementById(playerCardAreaID).childNodes;
+    //     for (let i =0; i < picCheck.length; i++){
+    //         if (picCheck[i].getAttribute('src') != null){
+    //             return true;
+    //         }
+    //         return false;
+    //     }   
+
+
 
