@@ -17,6 +17,8 @@ let canHit = true;
 let dealerScore = 0;
 let playerScore = 0;
 
+let playerWin = 0;
+
 
 
 window.onload = function(){
@@ -32,6 +34,7 @@ document.getElementById("newGameID").addEventListener("click", reset );
 
 function newGame(){
     window.location.reload();
+    document.getElementById("playerWinPic").innerHTML = "";
 }
 
 
@@ -63,6 +66,8 @@ function startGame(){
         newGame();
     }
     canHit = true;
+    playerWin = 0;
+    document.getElementById("playerWinPic").innerHTML = "";
    
     document.getElementById("results").innerText =" ";
     hidden = deck.pop();
@@ -101,9 +106,10 @@ function startGame(){
 
 }
 document.getElementById("hitMeID").addEventListener("click", hit);
+document.getElementById("hitMeID").addEventListener("click", hitMeAudio);
 document.getElementById("stayID").addEventListener("click", stay);
 document.getElementById("instructionsID").addEventListener("click", instructions );
-
+document.getElementById("newGameID").addEventListener("click", newGameAudio);
 
 function instructions(){
     alert("The classic game of blackjack--review the game at https://en.wikipedia.org/wiki/Blackjack");
@@ -129,6 +135,17 @@ function hit(){
 
 }
 
+function hitMeAudio(){
+    let audio = new Audio("hit_with_Pan.wav");
+    audio.play();
+
+}
+
+function newGameAudio(){
+    let audio = new Audio("trumpet_intro.wav");
+    audio.play();
+}
+
 function stay(){
     dealerSum = reduceAce(dealerSum, dealerAceCount);
     yourSum = reduceAce(yourSum, yourAceCount);
@@ -147,6 +164,7 @@ function stay(){
     else if (dealerSum > 21){
         message = "You Win!";
         playerScore++;
+        playerWin++;
         document.getElementById("playerWins").innerHTML = playerScore;
 
     }
@@ -157,6 +175,7 @@ function stay(){
     else if (yourSum > dealerSum){
         message = "You Win!";
         playerScore++;
+        playerWin++;
         document.getElementById("playerWins").innerHTML = playerScore;
 
     }
@@ -164,6 +183,12 @@ function stay(){
         message = "You Lose!";
         dealerScore++;
         document.getElementById("dealerWins").innerHTML = dealerScore;
+
+    }
+
+    if (playerWin > 0 ){
+        playerWinAudio();
+        document.getElementById("playerWinPic").innerHTML = '<img src="thumbsUp.jpg"></img>';
 
     }
 
@@ -177,6 +202,12 @@ function stay(){
     doneYet();
     // document.getElementById("results").innerText =" ";
 }
+
+function playerWinAudio(){
+    let audio = new Audio("applause.wav");
+    audio.play();
+}
+
 
 function reset() {
     document.querySelectorAll('.cardImages').forEach(el=>el.remove());
