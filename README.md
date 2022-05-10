@@ -19,3 +19,5 @@ repeat the steps above.
 Once either the player or the dealer has won 5 games, the match and game will be completed.
 You are welcome to press the new game button to clear the field and press the start game button to begin a new match of 5.
 
+A special thank you to all of the youtube videos, github examples, code alongs, google, and every resource that I utilized and modeled in the creation of this game.
+
